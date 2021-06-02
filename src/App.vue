@@ -55,5 +55,17 @@ npm install -g json-server ---> install JSON server
 create db.json file
 json-server --watch db.json ---> start JSON server
 (created script = npm run backend)
+-----
+GIT
+git init --> to initialize
+git add . --> to add all existing files to the project (commit to stagining)
+git status --> to check
+git commit -m "message" --> to add all files to local git repository
+-
+Create a GitHub repo --> commit local git repository to remote git repository
+git remote add origin https://github.com/jordi-colomer/millorem-el-tauli.git
+git branch -M main
+git push -u origin main
+
 */
 </style>
