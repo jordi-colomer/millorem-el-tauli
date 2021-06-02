@@ -3,7 +3,8 @@
 'Millorem el Taulí' app is a class exercise (Agile subject) on the UX/UI Master at ESDi (Escola Superior de Disseny Industrial).
 
 Design and created by:
-Gisela, Sandra and Jordi
+Gisela, Sandra and Jordi.
+
 Sabadell, June 2021.
 
 ## Project setup
