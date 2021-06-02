@@ -1,30 +1,59 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <router-view
+    :users="users"
+    :loggedUser="loggedUser"
+    :logged="logged"
+    @do-logged="doLogged"
+    @do-logged-user="doLoggedUser"
+  />
 </template>
 
+<script>
+export default {
+  name: "App",
+  data() {
+    return {
+      users: [],
+      logged: false,
+      loggedUser: {},
+    };
+  },
+  methods: {
+    doLogged(state) {
+      this.logged = state;
+    },
+    doLoggedUser(user) {
+      this.loggedUser = user;
+    },
+    async fetchUsers() {
+      const response = await fetch("api/users");
+
+      const data = await response.json();
+
+      return data;
+    },
+  },
+  async created() {
+    this.users = await this.fetchUsers();
+  },
+};
+</script>
+
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+/*
+npm run build ---> build for production (all content to deploy is in /dist folder)
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+npm install --save-dev serve ---> isntall serve for local dev
+npm install serve ---> install serve
+npm run serve
+localhost:8080 ---> dev server
+serve -s dist
+localhost:5000 ---> prod server
+----
+json-serve (https://www.npmjs.com/package/json-server)
+npm install -g json-server ---> install JSON server
+create db.json file
+json-server --watch db.json ---> start JSON server
+(created script = npm run backend)
+*/
 </style>

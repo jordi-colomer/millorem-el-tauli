@@ -1,0 +1,96 @@
+
+/* --------------------------- */
+/* --------- MY LIST --------- */
+/* --------------------------- */
+
+#mylist__user {
+  color: white;
+  text-align: center;
+  margin-top: 140px;
+  margin-bottom: 60px;
+}
+#content-mylist {
+  z-index: 2;
+  margin-bottom: 160px;
+}
+
+.no-problems {
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 8px;
+}
+.no-problems a {
+  color: #AB4164;
+  text-decoration: none;
+}
+
+@media (min-width: 767px) and (max-width: 1200px) {
+  #mylist__user{
+      margin-top: 147px;
+  }
+}
+@media (min-width: 1200px) {
+  #mylist__user {
+    margin-top: 160px;
+  }
+  #content-mylist {
+      margin-bottom: 200px;
+  }
+  #content-mylist:not(.empty) {
+      column-count: 2;
+      column-gap: 10px;
+  }
+}
+
+/* grid */
+
+#content-mylist .problem-in-list > h1 { 
+  grid-column-start: col1;
+  grid-column-end: col5;
+  grid-row-start: row2;
+  grid-row-end: row3;
+}
+.problem-in-list > .mylist_tools {
+  grid-column-start: col3;
+  grid-column-end: col5;
+  grid-row-start: row1;
+  grid-row-end: row2;
+}
+/* styles */
+.problem-in-list > .mylist_tools {
+  margin: 20px 20px 0 0;
+  padding: 0;
+  text-align: right;
+}
+.problem-in-list > .mylist_tools button {
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #898989;
+}
+.problem-in-list > .mylist_tools button:hover {
+  color: #000000;
+}
+
+/* tablet & desktop */
+@media (min-width: 767px) {
+  #content-mylist .problem-in-list > h1 {
+      grid-column-start: col2;
+      grid-column-end: col5;
+      grid-row-start: row1;
+      grid-row-end: row2;
+  }
+  .problem-in-list > .mylist_tools {
+    grid-column-start: col1;
+    grid-column-end: col2;
+    grid-row-start: row1;
+    grid-row-end: row2;
+  }
+  .problem-in-list > .mylist_tools {
+    margin: 20px 20px 0 20px;
+    padding: 0;
+    text-align: left;
+    z-index: 5;
+  }
+}

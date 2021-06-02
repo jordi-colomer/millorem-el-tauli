@@ -1,11 +1,35 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    redirect: "/login",
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("../views/Login.vue"),
+  },
+  {
+    path: "/list",
+    name: "List",
+    component: () => import("../views/List.vue"),
+  },
+  {
+    path: "/add",
+    name: "Add",
+    component: () => import("../views/Add.vue"),
+  },
+  {
+    path: "/mylist",
+    name: "MyList",
+    component: () => import("../views/MyList.vue"),
+  },
+  {
+    path: "/problem/:problemId",
+    name: "Problem",
+    props: true,
+    component: () => import("../views/Problem.vue"),
   },
   {
     path: "/about",

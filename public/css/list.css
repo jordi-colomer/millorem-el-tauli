@@ -1,0 +1,360 @@
+
+/* ------------------------ */
+/* --------- LIST --------- */
+/* ------------------------ */
+#content-list {
+  z-index: 2;
+  margin-top: 80px;
+  margin-bottom: 160px;
+}
+#problems-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.problem-in-list {
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  padding: 0;
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: [col1] auto [col2] auto [col3] auto [col4] 73px [col5];
+  grid-template-rows: [row1] auto [row2] auto [row3] auto [row4] auto [row5] auto [row6] auto [row7];
+  grid-gap: 10px;
+}
+
+/* grid */
+.problem-in-list > h1 { 
+  grid-column-start: col1;
+  grid-column-end: col4;
+  grid-row-start: row2;
+  grid-row-end: row3;
+}
+.problem-in-list > h2 { 
+  grid-column-start: col1;
+  grid-column-end: col4;
+  grid-row-start: row1;
+  grid-row-end: row2;
+}
+.problem-in-list > .list_department { 
+  grid-column-start: col1;
+  grid-column-end: col2;
+  grid-row-start: row5;
+  grid-row-end: row6;
+}
+.problem-in-list > .list_description { 
+  grid-column-start: col1;
+  grid-column-end: col5;
+  grid-row-start: row3;
+  grid-row-end: row4;
+}
+.problem-in-list > .list_annexes { 
+  grid-column-start: col1;
+  grid-column-end: col5;
+  grid-row-start: row4;
+  grid-row-end: row5;
+}
+.problem-in-list > .list_data { 
+  grid-column-start: col2;
+  grid-column-end: col5;
+  grid-row-start: row5;
+  grid-row-end: row6;
+}
+.problem-in-list > .list_status { 
+  grid-column-start: col1;
+  grid-column-end: col2;
+  grid-row-start: row6;
+  grid-row-end: row7;
+}
+.problem-in-list > .list_counters { 
+  grid-column-start: col2;
+  grid-column-end: col5;
+  grid-row-start: row6;
+  grid-row-end: row7;
+}
+.problem-in-list > .list_like--button { 
+  grid-column-start: col4;
+  grid-column-end: col5;
+  grid-row-start: row1;
+  grid-row-end: row3;
+}
+
+/* styles */
+.problem-in-list p {
+  margin: 0;
+  padding: 0;
+}
+.problem-in-list > h1 {
+  font-size: 22px;
+  font-weight: normal;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+.problem-in-list > h1:hover {
+  color: #AB4164;
+}
+.problem-in-list > h2 {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 20px 0 0 20px;
+  padding: 0;
+}
+.problem-in-list > .list_department {
+  font-size: 14px;
+  color: #898989;
+  margin: 0 0 0 20px;
+}
+
+.problem-in-list > .list_status {
+  margin: 0 0 20px 20px;
+}
+.problem-in-list > .list_status span {
+  display: inline-block;
+  min-width: 20px;
+  background: #aaa;
+  color: white;
+  padding: 2px 10px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+.problem-in-list.status0 > .list_status span {
+  background: #E5C628;
+}
+.problem-in-list.status1 > .list_status span {
+  background: #FFA800;
+}
+.problem-in-list.status2 > .list_status span {
+  background: #4A8BA5;
+}
+.problem-in-list.status3 > .list_status span {
+  background: #AB4164;
+}
+.problem-in-list.status4 > .list_status span {
+  background: #28B046;
+}
+
+.problem-in-list > .list_description {
+  display: block;
+  margin: 0 20px 0 22px;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.problem-in-list > .list_annexes { 
+  margin:  0 20px 0 20px;
+  color: #898989;
+}
+.problem-in-list > .list_annexes:before {
+  content: url('../images/icon-clip.svg');
+  top: 0;
+  margin-right: 6px;
+}
+
+.problem-in-list > .list_data {
+  font-size: 14px;
+  margin: 0 20px 0 0;
+  color: #898989;
+}
+.problem-in-list > .list_data .list_data--long {
+  display: none;
+}
+.problem-in-list > .list_counters {
+  font-size: 14px;
+  list-style: none;
+  margin: 0 20px 20px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.problem-in-list > .list_counters li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: #898989;
+  margin-left: 20px;
+}
+.problem-in-list > .list_counters .counter {
+  min-height: 22px;
+  font-weight: bold;
+}
+.problem-in-list > .list_counters span:not(.counter) {
+  display: none;
+}
+.problem-in-list > .list_counters .counter:after {
+  position: relative;
+  margin: 0 4px 0 4px;
+  min-height: 22px;
+  position: relative;
+}
+.problem-in-list > .list_counters .list_likes .counter:after {
+  content: url('../images/icon-like.svg');
+}
+.problem-in-list > .list_counters .list_comments .counter:after {
+  content: url('../images/icon-comment.svg');
+}
+.problem-in-list > .list_counters .list_solutions .counter:after {
+  content: url('../images/icon-solution.svg');
+}
+
+.problem-in-list > .list_like--button {
+  border-width: 0;
+  border-radius: 24px 12px 0 24px;
+  background: rgba(240,169,195,0.28);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 73px;
+}
+.problem-in-list > .list_like--button:hover {
+  box-shadow: 0 0 4px rgba(60,10,30,0.6);
+}
+.problem-in-list > .list_like--button:active {
+  box-shadow: inset 0 0 4px rgba(60,10,30,0.6);
+}
+.problem-in-list > .list_like--button:before {
+  content: url('../images/icon-heart--off.svg');
+}
+.problem-in-list > .list_like--button:hover:before {
+  content: url('../images/icon-heart--on.svg');
+}
+.problem-in-list.liked > .list_like--button:before {
+  content: url('../images/icon-heart--on.svg');
+}
+.problem-in-list.liked > .list_like--button:hover:before {
+  content: url('../images/icon-heart--off.svg');
+}
+.problem-in-list > .list_like--button span {
+  display: none;
+}
+
+/* tablet & desktop */
+@media (min-width: 767px) {
+  .problem-in-list {
+      grid-template-columns: [col1] 200px [col2] auto [col3] auto [col4] 73px [col5];
+      grid-template-rows: [row1] auto [row2] auto [row3] auto [row4] auto [row5] auto [row6];
+  }
+  /* grid */
+  .problem-in-list > h1 {
+      grid-column-start: col2;
+      grid-column-end: col4;
+      grid-row-start: row1;
+      grid-row-end: row2;
+  }
+  .problem-in-list > h2 {
+      grid-column-start: col1;
+      grid-column-end: col2;
+      grid-row-start: row1;
+      grid-row-end: row2;
+  }
+  .problem-in-list > .list_department {
+      grid-column-start: col1;
+      grid-column-end: col2;
+      grid-row-start: row2;
+      grid-row-end: row3;
+  }
+  .problem-in-list > .list_description {
+      grid-column-start: col2;
+      grid-column-end: col4;
+      grid-row-start: row2;
+      grid-row-end: row4;
+  }
+  .problem-in-list > .list_annexes {
+      grid-column-start: col2;
+      grid-column-end: col5;
+      grid-row-start: row4;
+      grid-row-end: row5;
+  }
+  .problem-in-list > .list_data {
+      grid-column-start: col2;
+      grid-column-end: col3;
+      grid-row-start: row5;
+      grid-row-end: row6;
+  }
+  .problem-in-list > .list_status {
+      grid-column-start: col1;
+      grid-column-end: col2;
+      grid-row-start: row1;
+      grid-row-end: row6;
+  }
+  .problem-in-list > .list_counters {
+      grid-column-start: col3;
+      grid-column-end: col5;
+      grid-row-start: row5;
+      grid-row-end: row6;
+  }
+  /* styles */
+  .problem-in-list > h1 {
+    margin: 20px 0 0 20px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .problem-in-list > h2 {
+      font-size: 16px;
+      margin: 20px 20px 0 20px;
+      padding: 0;
+      z-index: 1;
+  }
+  .problem-in-list > .list_department {
+      z-index: 5;
+      margin: 0 20px;
+  }
+  .problem-in-list > .list_description {
+      margin: 0 0 0 20px;
+  }
+
+  .problem-in-list > .list_data {
+      margin: 0 0 20px 20px;
+  }
+
+  .problem-in-list > .list_status {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: 0;
+      border-radius: 12px 24px 0 12px;
+      background: transparent;
+      z-index: 0;
+      box-shadow: 0 0 4px rgba(60,10,30,0.6);
+  }
+  .problem-in-list > .list_status span {
+      margin: 0 20px 20px 20px;
+      font-size: 14px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1200px) {
+  #content-list {
+      margin-top: 87px;
+  }
+  .problem-in-list > .list_data .list_data--long {
+      display: inline-block;
+  }
+  .problem-in-list > .list_data .list_data--short {
+      display: none;
+  }
+}
+@media (min-width: 1200px) {
+  #content-list {
+      margin-top: 100px;
+      margin-bottom: 200px;
+  }
+  #content-list:not(.empty) {
+      column-count: 2;
+      column-gap: 10px;
+  }
+  .problem-in-list {
+    position: sticky;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .p-problem-in-list > .list_counters span:not(.counter) {
+      display: inline-block;
+  }
+}

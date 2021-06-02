@@ -1,0 +1,83 @@
+
+/* ------------------------------- */
+/* --------- ADD PROBLEM --------- */
+/* ------------------------------- */
+
+#mask-add {
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background: rgba(255, 233, 240, 0.75);
+}
+#content-add header {
+  text-align: center;
+  margin-top: 140px;
+  margin-bottom: 60px;
+}
+#logo-add {
+  width: 62px;
+  height: 82px;
+}
+#content-add h1 {
+  font-size: 25px;
+  color: #AB4164;
+  margin: 20px 0 20px 0;
+}
+#content-add h2 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+#add-form {
+  margin: 0 auto 160px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+#add-form label {
+  display: none;
+}
+#add-form input,
+#add-form textarea {
+  border: none;
+  background-color: rgba(242,251,255,0.85);
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 17px 18px;
+  margin-bottom: 18px;
+}
+#add-form input:focus,
+#add-form textarea:focus {
+  background-color: rgba(242,251,255,1.0);
+}
+#add-form #annex-file-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  cursor: pointer;
+}
+#add-form #annex-file-label:hover {
+  color: #AB4164;
+}
+#add-form #annex-file-label span {
+  color: #898989;
+  font-size: 14px;
+  font-weight: normal;
+  float: right;
+}
+#add-form #annex-file {
+  display: none;
+}
+#add-problem_button {
+  color: white;
+  border: 1px solid #AB4164;
+  background-color: rgba(171,65,100,0.8);
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 17px 18px;
+}
+#add-problem_button:hover {
+  background-color: rgba(171,65,100,1.0);
+  cursor: pointer;
+}
