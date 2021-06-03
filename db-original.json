@@ -30,7 +30,7 @@
       "email": "silvia.pou@tauli.cat",
       "password": "admin@987",
       "department": "i3PT",
-      "type": "i3pt"
+      "type": "personal i3pt"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "email": "mark.wilson@tauli.cat",
       "password": "admin@987",
       "department": "i3PT",
-      "type": "i3pt"
+      "type": "personal i3pt"
     }
   ],
   "problems": [
@@ -84,9 +84,11 @@
       "title": "Look In Thy Glass, And Tell The Face Thous Viewest",
       "description": "Look in your mirror and tell the face you see that it’s time it should create another If you do not renew yourself you would be depriving the world, and stop some woman from becoming a mother. For where is the lovely woman whose unploughed womb would not appreciate the way you plow your field? Or who is he foolish enough to love himself so much as to neglect reproducing? You are the mirror of your mother, and she is the mirror of you, and in you, she recalls the lovely April of her youth. In the same way, you will see your youth in your own children, in spite of the wrinkles caused by age. But if you live your life avoiding being remembered you will die single and your image will die with you.<br><br>Who will believe my poem in times to come if it were filled with your great qualities? Heaven knows that it’s only like a grave that conceals your qualities, and doesn’t even show half your talents. Even if I had the ability to describe the beauty of your eyes, and write good lines that would enumerate all your gracious qualities, those who read it in the future would say ‘This poet is telling lies: no human face has ever possessed such heavenly beauty,’ so, my pages, yellowed with age, would be scorned like old men who talk nonsense, and the right that you have to such praise would be dismissed as a poet’s exaggeration – the elaborate metre of old-fashioned poems. But if there were a child of yours alive at that time, you would be doubly alive – in the child and in my poem.<br><br>Devouring Time, you may make the lion’s claws blunt and return all creatures to the earth from which they sprang; pull the teeth from the fierce tiger’s jaws, and destroy the phoenix in her fire. Do whatever you like, fast-running Time, to any beautiful fading thing in the world; but I forbid you to commit one heinous crime: oh don’t cut into my love’s beautiful brow, nor draw wrinkles there with your insane pen. As you go on your destructive course spare him as a pattern of beauty for posterity. But, do your worst, old Time. Whatever harm you do my love will remain young forever in my poetry.",
       "date": "Mon Apr 26 2021 17:40:10 GMT+0200 (CEST)",
-      "likes": [],
-      "status": "Sense tramitar",
-      "i3ptOwner": "",
+      "likes": [
+        "silvia.pou@tauli.cat"
+      ],
+      "status": "¡Solucionat!",
+      "i3ptOwner": "silvia.pou@tauli.cat",
       "annexes": [
         {
           "id": 1,

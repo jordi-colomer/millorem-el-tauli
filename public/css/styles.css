@@ -305,3 +305,19 @@ body, div, h1, h2, h3, h4, h5 {
   background-color: rgba(171,65,100,1.0);
   cursor: pointer;
 }
+.error-message {
+  position: relative;
+  border-radius: 12px;
+  color: rgba(171,65,100,0.95);
+  background: rgba(255,255,255, 0.6);
+  padding: 10px 20px 10px 46px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 4px rgba(60,10,30,0.6);
+}
+.error-message:before {
+  content: "!";
+  font-size: 36px;
+  position: absolute;
+  top: 6px;
+  left: 20px;
+}
