@@ -26,7 +26,11 @@ export default {
       this.loggedUser = user;
     },
     async fetchUsers() {
-      const response = await fetch("api/users");
+      const url =
+        process.env.NODE_ENV === "development"
+          ? "api/users"
+          : "https://millorem-el-tauli-be.herokuapp.com/api/users";
+      const response = await fetch(url);
 
       const data = await response.json();
 

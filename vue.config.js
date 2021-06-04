@@ -2,11 +2,10 @@ module.exports = {
   devServer: {
     proxy: {
       "^/api": {
-        //target: "http://localhost:5000",
-        target: "https://millorem-el-tauli-be.herokuapp.com",
+        target: "http://localhost:5000",
         changeOrigin: true,
         logLevel: "debug",
-        pathRewrite: { "^/api": "/api" },
+        pathRewrite: { "^/api": "/" },
       },
     },
   },

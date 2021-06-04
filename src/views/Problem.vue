@@ -279,8 +279,11 @@ export default {
   },
   methods: {
     async fetchProblem() {
-      const response = await fetch(`../api/problems/${this.problemId}`);
-      console.log(response);
+      const url =
+        process.env.NODE_ENV === "development"
+          ? `../api/problems/${this.problemId}`
+          : `https://millorem-el-tauli-be.herokuapp.com/api/problems/${this.problemId}`;
+      const response = await fetch(url);
       const data = await response.json();
       console.log(data);
       console.log(data.solutions);

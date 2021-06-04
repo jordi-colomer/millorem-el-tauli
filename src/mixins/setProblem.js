@@ -1,7 +1,11 @@
 export default {
   methods: {
     async setProblem(problem) {
-      const response = await fetch("api/problems/", {
+      const url =
+        process.env.NODE_ENV === "development"
+          ? "api/problems/"
+          : "https://millorem-el-tauli-be.herokuapp.com/api/problems/";
+      const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

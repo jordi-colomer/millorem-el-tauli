@@ -99,7 +99,11 @@ export default {
   },
   methods: {
     async fetchProblems() {
-      const response = await fetch("api/problems");
+      const url =
+        process.env.NODE_ENV === "development"
+          ? "api/problems"
+          : "https://millorem-el-tauli-be.herokuapp.com/api/problems";
+      const response = await fetch(url);
       const data = await response.json();
       return data;
     },
