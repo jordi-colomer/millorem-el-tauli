@@ -188,7 +188,7 @@ body, div, h1, h2, h3, h4, h5 {
 }
 
 @media (max-width: 767px) {
-  #main-nav__add {
+  #main-nav #main-nav__add {
     margin-top: -40px;
   }
   #main-nav #main-nav__add a {
