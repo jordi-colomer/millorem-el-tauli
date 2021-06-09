@@ -117,7 +117,7 @@ body, div, h1, h2, h3, h4, h5 {
   background: white;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  height: 70px;
+  height: 74px;
   z-index: 10;
   box-shadow: 0 0 4px rgba(60,10,30,0.6);
 }
@@ -133,7 +133,7 @@ body, div, h1, h2, h3, h4, h5 {
 }
 #main-nav li {
   position: relative;
-  margin: 0 10px;
+  margin: 0 4px;
   min-width: 120px;
 }
 #main-nav li a {
