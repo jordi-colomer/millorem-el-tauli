@@ -191,7 +191,7 @@ body, div, h1, h2, h3, h4, h5 {
   #main-nav__add {
     margin-top: -40px;
   }
-  #main-nav__add li a {
+  #main-nav #main-nav__add a {
     padding-top: 84px;
   }
   #main-nav #add:before {
