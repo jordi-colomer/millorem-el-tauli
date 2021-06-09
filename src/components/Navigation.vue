@@ -22,7 +22,7 @@
           Llista
         </router-link>
       </li>
-      <li>
+      <li id="main-nav__add">
         <router-link
           id="add"
           to="/add"
